@@ -157,7 +157,7 @@ const initialState: AppState = {
   error: null,
   pagination: {
     total: 0,
-    limit: 25,
+    limit: 100,
     offset: 0,
     hasMore: false,
     currentPage: 1,
@@ -379,7 +379,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       action: {
         label: "View Results",
         onClick: () => {
-          router.push(`/image/${encodeURIComponent(imageName)}/scan/${scanId}`);
+          router.push(`/image/${encodeURIComponent(imageName)}/${scanId}`);
         }
       }
     });
